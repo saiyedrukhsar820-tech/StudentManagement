@@ -3,5 +3,38 @@
 <head><title>Student Management</title></head>
 <body>
   <h1>Student Management System</h1>
+
+  <h2>Add Student</h2>
+  <form>
+    <label>Student ID:</label>
+    <input type="text" id="studentId"><br><br>
+    <label>Name:</label>
+    <input type="text" id="studentName"><br><br>
+    <label>Course:</label>
+    <input type="text" id="studentCourse"><br><br>
+    <button type="button" onclick="addStudent()">Add Student</button>
+  </form>
+
+  <h2>Search Student</h2>
+  <form>
+    <label>Enter Student ID:</label>
+    <input type="text" id="searchId">
+    <button type="button" onclick="searchStudent()">Search</button>
+  </form>
+  <p id="searchResult"></p>
+
+  <script>
+    function addStudent() {
+      var id = document.getElementById("studentId").value;
+      var name = document.getElementById("studentName").value;
+      var course = document.getElementById("studentCourse").value;
+      alert("Student Added: " + id + ", " + name + ", " + course);
+    }
+
+    function searchStudent() {
+      var searchId = document.getElementById("searchId").value;
+      document.getElementById("searchResult").innerHTML = "Searching for Student ID: " + searchId;
+    }
+  </script>
 </body>
 </html>
