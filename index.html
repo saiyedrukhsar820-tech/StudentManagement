@@ -23,6 +23,16 @@
   </form>
   <p id="searchResult"></p>
 
+  <h2>Display All Students</h2>
+  <button type="button" onclick="displayStudents()">Display Students</button>
+  <p id="displayResult"></p>
+
+  <h2>Delete Student</h2>
+  <label>Enter Student ID to Delete:</label>
+  <input type="text" id="deleteId">
+  <button type="button" onclick="deleteStudent()">Delete</button>
+  <p id="deleteResult"></p>
+
   <script>
     function addStudent() {
       var id = document.getElementById("studentId").value;
@@ -34,6 +44,15 @@
     function searchStudent() {
       var searchId = document.getElementById("searchId").value;
       document.getElementById("searchResult").innerHTML = "Searching for Student ID: " + searchId;
+    }
+
+    function displayStudents() {
+      document.getElementById("displayResult").innerHTML = "Displaying all student records...";
+    }
+
+    function deleteStudent() {
+      var delId = document.getElementById("deleteId").value;
+      document.getElementById("deleteResult").innerHTML = "Deleted Student ID: " + delId;
     }
   </script>
 </body>
