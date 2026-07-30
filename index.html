@@ -3,5 +3,25 @@
 <head><title>Student Management</title></head>
 <body>
   <h1>Student Management System</h1>
+  <h2>Add Student</h2>
+<form>
+  <label>Student ID:</label>
+  <input type="text" id="studentId"><br><br>
+  
+  <label>Name:</label>
+  <input type="text" id="studentName"><br><br>
+  <label>Course:</label>
+  <input type="text" id="studentCourse"><br><br>
+  <button type="button" onclick="addStudent()">Add Student</button>
+</form>
+
+<script>
+function addStudent() {
+  var id = document.getElementById("studentId").value;
+  var name = document.getElementById("studentName").value;
+  var course = document.getElementById("studentCourse").value;
+  alert("Student Added: " + id + ", " + name + ", " + course);
+}
+</script>
 </body>
 </html>
